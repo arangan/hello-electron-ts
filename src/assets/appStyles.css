@@ -1,0 +1,82 @@
+body {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url(./siddhanta.ttf);
+}
+#tbody {
+  font-family: "myFirstFont";
+  font-size: 25px;
+}
+span.inp {
+  background-color: yellow;
+  margin: 0 0 0 0;
+  border: 0px;
+  outline: none;
+  letter-spacing: 5px;
+  background: rgb(16 119 24 / 0%);
+}
+table.header {
+  width: 100%;
+  max-width: 2480px;
+  /* border: solid 1px black; */
+  /* margin-left: 5%;
+  margin-right: 5%; */
+}
+table.header td {
+  /* border: solid 1px black; */
+  padding-bottom: 7px;
+}
+
+.leftAlign {
+  text-align: left;
+}
+.rightAlign {
+  text-align: right;
+}
+.underLine {
+  border-bottom: 2px solid black;
+}
+.colon {
+  padding-left: 3px;
+  padding-right: 5px;
+  /* border:solid 1px black; */
+}
+input {
+  font-family: "myFirstFont";
+  font-size: 25px;
+  width: 100%;
+  /* letter-spacing: 4px; */
+}
+#inlineSpan {
+  min-width: 200px;
+  display: inline-block;
+  border: solid 1px yellow;
+}
+
+.expandableParent {
+  font-family: "myFirstFont";
+  font-size: 25px;
+  position: relative;
+  border: none;
+}
+
+.spanExpandable {
+  white-space: pre-wrap;
+  font: inherit;
+  /* display: none; */
+}
+
+.inputExpandable {
+  position: absolute;
+  width: 100%;
+  font: inherit;
+  min-width: 1ch;
+  border: none;
+  outline: none;
+}
+.inputExpandable:focus {
+  border-bottom: solid 1px;
+}
