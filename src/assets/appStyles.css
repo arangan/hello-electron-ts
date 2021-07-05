@@ -19,15 +19,17 @@ span.inp {
   background: rgb(16 119 24 / 0%);
 }
 table.header {
-  width: 100%;
+  width: 90%;
   max-width: 2480px;
   /* border: solid 1px black; */
-  /* margin-left: 5%;
-  margin-right: 5%; */
+  margin-left: auto;
+  margin-right: auto;
+  min-width: none;
 }
 table.header td {
   /* border: solid 1px black; */
   padding-bottom: 7px;
+  padding-left: 0px;
 }
 
 .leftAlign {
@@ -54,29 +56,4 @@ input {
   min-width: 200px;
   display: inline-block;
   border: solid 1px yellow;
-}
-
-.expandableParent {
-  font-family: "myFirstFont";
-  font-size: 25px;
-  position: relative;
-  border: none;
-}
-
-.spanExpandable {
-  white-space: pre-wrap;
-  font: inherit;
-  /* display: none; */
-}
-
-.inputExpandable {
-  position: absolute;
-  width: 100%;
-  font: inherit;
-  min-width: 1ch;
-  border: none;
-  outline: none;
-}
-.inputExpandable:focus {
-  border-bottom: solid 1px;
 }

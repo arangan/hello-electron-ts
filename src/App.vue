@@ -54,75 +54,89 @@
 
   <br />
   <div class="docBody">
-    <table id="tbl1" style="width: 100%; border: solid 1px black" border="1">
+    <table
+      id="tbl1"
+      style="border: solid 1px black; margin-left: auto; margin-right: auto"
+    >
       <caption>
         Pallavi
       </caption>
       <tr>
-        <td><input-expandable v-model="docBody[0]" /></td>
-        <td><input-expandable v-model="docBody[1]" /></td>
-        <td><input-expandable v-model="docBody[2]" /></td>
-        <td><input-expandable v-model="docBody[3]" /></td>
-        <td><input-expandable v-model="docBody[4]" /></td>
-        <td><input-expandable v-model="docBody[5]" /></td>
-        <td><input-expandable v-model="docBody[6]" /></td>
-        <td><input-expandable v-model="docBody[7]" /></td>
-        <td><input-expandable v-model="docBody[8]" /></td>
-        <td><input-expandable v-model="docBody[9]" /></td>
+        <td style="width: auto">
+          <input-expandable v-model="docBody[0][0]" />
+        </td>
+        <td><input-expandable v-model="docBody[0][1]" /></td>
+        <td><input-expandable v-model="docBody[0][2]" /></td>
+        <td><input-expandable v-model="docBody[0][3]" /></td>
+        <td><input-expandable v-model="docBody[0][4]" /></td>
+        <td><input-expandable v-model="docBody[0][5]" /></td>
+        <td><input-expandable v-model="docBody[0][6]" /></td>
+        <td><input-expandable v-model="docBody[0][7]" /></td>
+        <td><input-expandable v-model="docBody[0][8]" /></td>
+        <td><input-expandable v-model="docBody[0][9]" /></td>
       </tr>
     </table>
     <br />
     <div class="bodyGrid">
-      <div><input-expandable v-model="docBody[0]" /></div>
-      <div><input-expandable v-model="docBody[1]" /></div>
-      <div><input-expandable v-model="docBody[2]" /></div>
-      <div><input-expandable v-model="docBody[3]" /></div>
-      <div><input-expandable v-model="docBody[4]" /></div>
-      <div><input-expandable v-model="docBody[5]" /></div>
-      <div><input-expandable v-model="docBody[6]" /></div>
-      <div><input-expandable v-model="docBody[7]" /></div>
-      <div><input-expandable v-model="docBody[8]" /></div>
-      <div><input-expandable v-model="docBody[9]" /></div>
+      <div><input-expandable v-model="docBody[0][0]" /></div>
+      <div><input-expandable v-model="docBody[0][1]" /></div>
+      <div><input-expandable v-model="docBody[0][2]" /></div>
+      <div><input-expandable v-model="docBody[0][3]" /></div>
+      <div><input-expandable v-model="docBody[0][4]" /></div>
+      <div><input-expandable v-model="docBody[0][5]" /></div>
+      <div><input-expandable v-model="docBody[0][6]" /></div>
+      <div><input-expandable v-model="docBody[0][7]" /></div>
+      <div><input-expandable v-model="docBody[0][8]" /></div>
+      <div><input-expandable v-model="docBody[0][9]" /></div>
 
-      <div><input-expandable v-model="docBody[0]" /></div>
-      <div><input-expandable v-model="docBody[1]" /></div>
-      <div><input-expandable v-model="docBody[2]" /></div>
-      <div><input-expandable v-model="docBody[3]" /></div>
-      <div><input-expandable v-model="docBody[4]" /></div>
-      <div><input-expandable v-model="docBody[5]" /></div>
-      <div><input-expandable v-model="docBody[6]" /></div>
-      <div><input-expandable v-model="docBody[7]" /></div>
-      <div><input-expandable v-model="docBody[8]" /></div>
-      <div><input-expandable v-model="docBody[9]" /></div>
+      <div><input-expandable v-model="docBody[1][0]" /></div>
+      <div><input-expandable v-model="docBody[1][1]" /></div>
+      <div><input-expandable v-model="docBody[1][2]" /></div>
+      <div><input-expandable v-model="docBody[1][3]" /></div>
+      <div><input-expandable v-model="docBody[1][4]" /></div>
+      <div><input-expandable v-model="docBody[1][5]" /></div>
+      <div><input-expandable v-model="docBody[1][6]" /></div>
+      <div><input-expandable v-model="docBody[1][7]" /></div>
+      <div><input-expandable v-model="docBody[1][8]" /></div>
+      <div><input-expandable v-model="docBody[1][9]" /></div>
     </div>
   </div>
+  <br />
+  <hr />
+  <input-flex v-model="myData" />
+  <hr />
+  <!-- <input-flex /> <br /><br />
+
+  <input-flex /> -->
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 import { DocHeader } from "./models/DocHeader";
 import InputExpandable from "./components/InputExpandable.vue";
+import InputFlex from "./components/InputFlex.vue";
+
 import "./assets/appStyles.css";
 import "./assets/simpleGrid.css";
+import "./assets/inputExpandable.css";
 
 @Options({
   components: {
     InputExpandable,
+    InputFlex,
   },
 })
 export default class App extends Vue {
-  myData = "";
+  myData = "श्री";
   docHeader = new DocHeader();
   docBody = new Array<Array<string>>(2);
 
   created(): void {
-    console.log(this.myData);
-
     this.docHeader.raagam = "श्री";
     this.docHeader.taalam = "झप";
     this.docHeader.arohanam = "नि᳝ सा रे॒ म॔ प नि सां";
     this.docHeader.avarohanam = "सां नि ध॒ प म॔ ग रे॒ ग रे॒ रे॒ सा";
-    this.docBody[0] = new Array<string>(10);
+    this.docBody[0] = new Array<string>();
 
     this.docBody[0].push("Sa");
     this.docBody[0].push("re");
@@ -135,9 +149,9 @@ export default class App extends Vue {
     this.docBody[0].push("r");
     this.docBody[0].push("g");
 
-    this.docBody[1] = new Array<string>(10);
-    this.docBody[1].push("Sa");
-    this.docBody[1].push("re");
+    this.docBody[1] = new Array<string>();
+    this.docBody[1].push("सा");
+    this.docBody[1].push("रे॒");
     this.docBody[1].push("ga");
     this.docBody[1].push("m");
     this.docBody[1].push("p");
